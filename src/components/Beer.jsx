@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Beer(props) {
-  return(
+  return (
     <div>
       <style jsx>{`
         .beer-card {
@@ -59,7 +59,7 @@ function Beer(props) {
         }
 
         h5 {
-          font-size: 30px;
+          font-size: 15px;
           margin-top: -10%;
           text-align: center;
           color:  rgba(255, 255, 255, 0.6);
@@ -73,13 +73,13 @@ function Beer(props) {
       `}</style>
 
       <div className='card beer-card'>
-      <div className="img-holder">
-        <img className='card-img-top' src={props.imgURL} />
-      </div>      
+        <div className="img-holder">
+          <img className='card-img-top' src={props.imgURL} />
+        </div>
         <div className='card-body'>
           <h5 className='card-title'>{props.name}<span className="brand">{props.brand}</span></h5>
           <h6 className='card-text'>{props.price}</h6>
-          <h6 className='card-text'>{props.alchoholContent}</h6>
+          <h6 className='card-text'>{props.alchoholContent}% ABV</h6>
           <p className='card-text'>{props.description}</p>
         </div>
       </div>
