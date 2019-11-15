@@ -3,6 +3,7 @@ import React from 'react';
 function Beer(props) {
   return (
     <div>
+      
       <style jsx>{`
         .beer-card {
           width: 275px;
@@ -77,8 +78,10 @@ function Beer(props) {
           <img className='card-img-top' src={props.imgURL} />
         </div>
         <div className='card-body'>
-          <h5 className='card-title'>{props.name}<span className="brand">{props.brand}</span></h5>
-          <h6 className='card-text'>{props.price}</h6>
+          <div className="title-div">
+            <h5 className='card-title'>{props.name}<span className="brand">{props.brand}</span></h5>
+          </div>
+          <h6 className='card-text'>${props.price}</h6>
           <h6 className='card-text'>{props.alchoholContent}% ABV</h6>
           <p className='card-text'>{props.description}</p>
         </div>
