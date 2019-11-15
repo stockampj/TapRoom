@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
-import BioFeed from './BioFeed';
+import BeerMenu from './BeerMenu';
 import './App.css';
 
 function App(){
@@ -10,7 +10,7 @@ function App(){
       <NavBar />
       <div className="contentMain">
         <Switch>
-          <Route exact path='/' component={BioFeed} />
+          <Route exact path='/' component={BeerMenu} />
           {/* <Route path='/hotpicks' component={} /> */}
         </Switch>
 
