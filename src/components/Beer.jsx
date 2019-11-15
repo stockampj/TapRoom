@@ -7,8 +7,9 @@ function Beer(props) {
       <style jsx>{`
         .beer-card {
           width: 275px;
-          height: 440px;
+          height: 350px;
           margin: 20px;
+          padding: 10px;
           border-radius: 0px;
           border: solid 1px rgba(255, 255, 255, 0.2);
           background-color: rgba(54, 54, 54, .2);
@@ -48,41 +49,75 @@ function Beer(props) {
           left: 5px;
         } */
 
-        .img-holder{
-          margin: 5%;
-          height: 200px;
-          min-height: 200px;
-          overflow: hidden; 
-          border: solid 1px rgba(255, 255, 255, 0.2);
-          border-radius: 20px;
-          -webkit-box-shadow: 0px 0px 6px -2px #000000; 
-          box-shadow: 0px 0px 6px -2px #000000;
-        }
-
-        h5 {
-          font-size: 15px;
-          margin-top: -10%;
+        .title-div {
+          font-size: 22px;
+          text-align: left;
+          color:  rgba(230, 210, 210, 1);
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.95);
+          height: 60px;
+          font-weight: 800;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           text-align: center;
-          color:  rgba(255, 255, 255, 0.6);
+          
         }
 
-        img {
-          height: 250px;
-          margin-top: -25px;
-        } 
+        .beer-info-parent {
+          display: flex;
+          align-items: stretch;
+          background-color:  rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+          border: solid thin  rgba(0, 0, 0, 0.3);
+          margin-top: 5px;
+        }
+
+        .card-img-beer {
+          height: 72px;
+          flex-basis: 20px;
+          margin: 10px;
+        }
+
+        .beer-info {
+          display: flex;
+          flex-wrap: wrap;
+          flex-grow: 3;
+          justify-content: space-between;
+          padding: 10px;
+        }
+
+        .beer-info h6{
+          margin-left: 10px;
+        }
+
+        .brand {
+          flex-basis: 400px;
+          color: rgba(84, 1, 1, 1);
+          font-size: 1.1em;
+        }
+
+        .card-description {
+          margin-top: 5px;
+          height: 100px;
+        }
+
 
       `}</style>
 
       <div className='card beer-card'>
-        <div className="img-holder">
-          <img className='card-img-top' src={props.imgURL} />
+        <div className="title-div">
+          <p className='card-title'>{props.name}</p>
         </div>
-        <div className='card-body'>
-          <div className="title-div">
-            <h5 className='card-title'>{props.name}<span className="brand">{props.brand}</span></h5>
+        <div className='beer-info-parent'>
+          <img className='card-img-beer' src={props.imgURL} />
+          <div className="beer-info">
+            <h6 className='card-text'>{props.alchoholContent.toFixed(1)}% ABV</h6>
+            <h6 className='card-text'>${props.price.toFixed(2)}</h6>
+            <h6 className="brand">{props.brand}</h6>
           </div>
-          <h6 className='card-text'>${props.price}</h6>
-          <h6 className='card-text'>{props.alchoholContent}% ABV</h6>
+        </div>
+        <div className='card-description'>
           <p className='card-text'>{props.description}</p>
         </div>
       </div>

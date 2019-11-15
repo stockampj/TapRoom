@@ -9,7 +9,7 @@ import beerDark from '../assets/img/beer-dark.png';
 var beerList = [
   {
     imgURL: beerLight,
-    name: 'Citra Dry Hopped Transcendental Pulp Phantasm',
+    name: 'Citra Dry Hopped Transcendental Pulp',
     brand: 'Stone',
     price: 4.50,
     alchoholContent: 5.1,
@@ -55,10 +55,10 @@ function BeerMenu(){
 
       <style>{`
         .flex-container {
+            margin-top: 25px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 25px;
           }
       `}</style>
 
