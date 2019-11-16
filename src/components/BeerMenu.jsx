@@ -106,8 +106,9 @@ function BeerMenu(){
 
         .flex-container {
           position: absolute;
-          top: 90px;
-          height: 84%;
+          top: 130px;
+          height: 100%;
+          padding-bottom: 120px;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
@@ -115,11 +116,19 @@ function BeerMenu(){
 
         }
 
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background:  rgba(0,0,0,0.5);
+        }
+
         h1 {
           text-align: center;
           font-weight: 800;
           color:  rgba(230, 196, 151, 1);
-          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+          text-shadow: 1px 1px 3px rgba(50,50,50,0.8);
         }
       `}</style>
 
@@ -130,20 +139,21 @@ function BeerMenu(){
         <div className="top-wrapper">
             <Carousel />
         </div>
-      </div>
-      <div className='flex-container'>
-        {beerList.map((beer, index)=>
-          <Beer
-          imgURL={beer.imgURL}
-          name={beer.name}
-          brand={beer.brand}
-          price={beer.price}
-          alchoholContent={beer.alchoholContent}
-          description={beer.description}
-          pintRemainingCount={beer.pintRemainingCount}
-          key={index}
-          />
-          )},
+        <div className='flex-container'>
+          {beerList.map((beer, index)=>
+            <Beer
+            imgURL={beer.imgURL}
+            name={beer.name}
+            brand={beer.brand}
+            price={beer.price}
+            alchoholContent={beer.alchoholContent}
+            description={beer.description}
+            pintRemainingCount={beer.pintRemainingCount}
+            key={index}
+            />
+            )},
+        </div>
+
       </div>
       
 

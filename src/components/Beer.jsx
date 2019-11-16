@@ -6,8 +6,8 @@ function Beer(props) {
       <style jsx>{`
         .beer-card {
           width: 275px;
-          height: 350px;
-          margin: 20px;
+          height: 340px;
+          margin: 15px;
           padding: 10px;
           border-radius: 0px;
           border: solid 1px rgba(255, 255, 255, 0.2);
