@@ -1,6 +1,6 @@
 .contentMain {
   padding-top: 40px;
   overflow: hidden;
-  background: rgb(163,29,29);
-  background: linear-gradient(119deg, rgba(163,29,29,1) 0%, rgba(231,169,113,1) 48%, rgba(176,39,39,1) 100%);
+  /* background: rgb(163,29,29);
+  background: linear-gradient(119deg, rgba(163,29,29,1) 0%, rgba(231,169,113,1) 48%, rgba(176,39,39,1) 100%); */
 }
