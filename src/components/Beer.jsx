@@ -1,22 +1,23 @@
 import React from 'react';
+import woodTexture from '../assets/img/woodTexture.jpg';
 
 function Beer(props) {
   return (
     <div>
       <style jsx>{`
         .beer-card {
-          width: 260px;
-          height: 340px;
+          width: 285px;
+          height: 350px;
           margin: 25px;
           margin-bottom: 0px;
-          padding: 10px;
-          border-radius: 0px;
-          border: solid 1px rgba(255, 255, 255, 0.2);
+          padding: 20px;
+          border-radius: 25px;
+          border: solid 2px rgba(244,230,187,.5);
           box-shadow: 4px 5px 5px -3px #000000;
           overflow: hidden;
-          background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(30,50,68,1.0) -10%, rgba(52,82,110,1.0) 54%, rgba(30,50,68,1.0) 110%);
-
+          background-image: url(${woodTexture});
+          background-size: 250%;
+          background-position: bottom, center;
         }
 
         .beer-card:hover {                                                                                               

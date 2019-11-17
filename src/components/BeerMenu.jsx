@@ -83,9 +83,13 @@ var beerList = [
 
 function BeerMenu(){
   return(
-    <div>
+    <div className="beer-menu">
 
       <style>{`
+        .beer-menu {
+          font-family: 'Port Lligat Slab', serif;
+        }
+
         .bottom-wrapper {
           position: absolute;
           height:100%;
@@ -110,15 +114,27 @@ function BeerMenu(){
           box-shadow: 4px 5px 5px -3px #000000;
         }
 
+        @keyframes fadeInUp {
+          0% {
+              transform: translateY(600px);
+          }
+          100% {
+
+              transform: translateY(0);
+          }
+        }
+
         .flex-container {
           position: absolute;
           top: 162px;
           height: 100%;
           padding-bottom: 190px;
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
           flex-wrap: wrap;
           overflow-y: scroll;
+          animation-name: fadeInUp;
+          animation-duration: 2.5s;
         }
 
         ::-webkit-scrollbar {
@@ -129,6 +145,20 @@ function BeerMenu(){
           background:  rgba(0,0,0,0.5);
         }
 
+        @keyframes fadeInLeft {
+          0% {
+              opacity: 0;
+              transform: translateX(600px);
+          }
+          50% {
+              opacity: .2;
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0);
+          }
+        }
+
         h1 {
           text-align: center;
           font-weight: 800;
@@ -137,6 +167,8 @@ function BeerMenu(){
           font-size: 40px;
           margin: 5px;
           font-family: 'UnifrakturCook', cursive;
+          animation-name: fadeInLeft;
+          animation-duration: 3s;
         }
       `}</style>
 

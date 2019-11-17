@@ -1,4 +1,5 @@
 import React from 'react';
+import background from '../assets/img/background.jpg';
 
 function Background(){
   return(
@@ -14,9 +15,12 @@ function Background(){
           margin-top:-50px;
           width: 120%;
           height: 120%;
-          background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(30,50,68,1) 0%, rgba(52,82,110,1) 22%, rgba(92,126,156,1) 54%, rgba(52,82,110,1) 78%, rgba(30,50,68,1) 100%);        }
-      `}</style>
+          background: rgb(13,2,2);
+          background: linear-gradient(126deg, rgba(13,2,2,1) 0%, rgba(25,15,4,1) 25%, rgba(52,41,25,1) 54%, rgba(25,15,4,1) 80%, rgba(13,2,2,1) 100%);
+          background-image: url(${background});
+          background-size: cover;
+          background-position: center, center;
+        `}</style>
 
       <div className="app-background">
 
