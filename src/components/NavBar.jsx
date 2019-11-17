@@ -7,7 +7,7 @@ function NavBar() {
     <div className="">
       <div className='row top-nav-row'>
         <ul>
-          <li><Link className='btn home-button' to='/'><i className="fas fa-beer">  TapRoom </i></Link></li>
+          <li><Link className='btn home-button' to='/'><i className="fas fa-beer"><span className="btn-text"> Tap Room</span></i></Link></li>
         </ul>
       </div>
     </div>

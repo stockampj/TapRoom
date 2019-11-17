@@ -11,8 +11,9 @@ function Beer(props) {
           padding: 10px;
           border-radius: 0px;
           border: solid 1px rgba(255, 255, 255, 0.2);
-          background-color: rgba(54, 54, 54, .2);
-          -webkit-box-shadow: 4px 5px 5px -3px #000000; 
+          background: rgb(79,79,79);
+          background: rgb(46,46,46);
+          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 52%, rgba(22,22,22,0.8) 100%);
           box-shadow: 4px 5px 5px -3px #000000;
           overflow: hidden;
         }
@@ -20,13 +21,13 @@ function Beer(props) {
         .beer-card:hover {                                                                                               
           -webkit-box-shadow: 0px 0px 13px 1px #000000; 
           box-shadow: 0px 0px 13px 1px #000000;
-          background-color: rgba(54, 54, 54, .1);
+          background-color: rgba(80, 80, 80, .8);
         }
 
         .title-div {
           font-size: 22px;
           text-align: left;
-          color:  rgba(230, 196, 151, 1);
+          color: rgba(255, 255, 255, .8);
           text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
           height: 60px;
           font-weight: 800;
@@ -40,9 +41,10 @@ function Beer(props) {
         .beer-info-parent {
           display: flex;
           align-items: stretch;
-          background-color:  rgba(227, 174, 104, .4);
+          background: rgb(30,50,68);
+          background: linear-gradient(126deg, rgba(52,82,110,.8) 0%, rgba(92,126,156,.8) 54%, rgba(52,82,110,.8) 100%);
           border-radius: 10px;
-          border: solid thin  rgba(0, 0, 0, 0.3);
+          border: solid 1px rgba(255, 255, 255, 0.2);
           margin-top: 5px;
           -webkit-box-shadow: 0px 0px 12px -4px #000000; 
           box-shadow: 0px 0px 12px -4px #000000;
@@ -68,7 +70,8 @@ function Beer(props) {
 
         .brand {
           flex-basis: 400px;
-          color: rgba(84, 1, 1, 1);
+          color:  rgba(230, 196, 151, 1);
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
           font-size: 1.1em;
           font-weight: 700;
         }
@@ -76,6 +79,7 @@ function Beer(props) {
         .card-description {
           margin-top: 5px;
           height: 100px;
+          color: rgba(255, 255, 255, .8);
         }
 
         .button-div {
@@ -86,8 +90,10 @@ function Beer(props) {
         }
 
         .btn-beer {
-          background-color:  rgba(227, 174, 104, .6);
-          border: solid thin  rgba(0, 0, 0, 0.3);
+          background: rgb(30,50,68);
+          background: linear-gradient(126deg, rgba(52,82,110,.8) 0%, rgba(92,126,156,.8) 100%);
+          color: rgba(255, 255, 255, .7);
+          border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 
           box-shadow: 1px 1px 2px 0px #000000;
           border-radius: 0px;
@@ -96,11 +102,14 @@ function Beer(props) {
           bottom: 0px;
         }
         .btn-beer:hover {
-          background-color:  rgba(227, 174, 104, .8);
-          border: solid thin  rgba(0, 0, 0, 0.3);
+          background: rgb(30,50,68);
+          background: linear-gradient(126deg, rgba(52,82,110,.9) 0%, rgba(92,126,156,.9) 100%);
+          color: rgba(255, 255, 255, .8);
+          border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 
           box-shadow: 1px 1px 2px 1px #000000;
           border-radius: 0px;
+
         }
         
         .beer-count {
@@ -108,6 +117,7 @@ function Beer(props) {
           right: 0px;
           bottom: 0px;
           margin-right: 30px;
+          color: rgba(255, 255, 255, .8);
         }
 
       `}</style>

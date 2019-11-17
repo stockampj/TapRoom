@@ -7,9 +7,11 @@ function Carousel(){
       <style jsx>{`
 
         .carousel {
-          margin-right: -50%;
+          margin-top: -25%;
+          margin-left: -85px;
           width: 200%;
           min-width: 1500px;
+          max-width: 2000px;
         }
 
       `}</style>

@@ -91,24 +91,28 @@ function BeerMenu(){
           position: absolute;
           height:100%;
           width: 100%;
-          bottom: 40px;
+          bottom: 60px;
           overflow: hidden;
-          border-bottom: solid 10px rgba(50, 50, 50, .8);
+          border-bottom: solid 1px rgba(255, 255, 255, 0.2); 
+          -webkit-box-shadow: 4px 5px 5px -3px #000000; 
+          box-shadow: 4px 5px 5px -3px #000000;
           z-index: -1;
         }
 
         .top-wrapper {
-          margin-top: 120px;
+          margin-top: 160px;
           width: 100%;
           overflow: hidden;
-          border-top: solid 10px rgba(50, 50, 50, .8);
+          border-top: solid 1px rgba(255, 255, 255, 0.2); 
+          -webkit-box-shadow: 4px 5px 5px -3px #000000; 
+          box-shadow: 4px 5px 5px -3px #000000;
         }
 
         .flex-container {
           position: absolute;
-          top: 130px;
+          top: 161px;
           height: 100%;
-          padding-bottom: 120px;
+          padding-bottom: 160px;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
@@ -128,7 +132,10 @@ function BeerMenu(){
           text-align: center;
           font-weight: 800;
           color:  rgba(230, 196, 151, 1);
-          text-shadow: 1px 1px 3px rgba(50,50,50,0.8);
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+          font-size: 40px;
+          margin: 5px;
+          font-family: 'UnifrakturCook', cursive;
         }
       `}</style>
 
