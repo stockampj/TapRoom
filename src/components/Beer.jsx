@@ -11,11 +11,11 @@ function Beer(props) {
           padding: 10px;
           border-radius: 0px;
           border: solid 1px rgba(255, 255, 255, 0.2);
-          background: rgb(79,79,79);
-          background: rgb(46,46,46);
-          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 52%, rgba(22,22,22,0.8) 100%);
           box-shadow: 4px 5px 5px -3px #000000;
           overflow: hidden;
+          background: rgb(30,50,68);
+          background: linear-gradient(126deg, rgba(30,50,68,.8) 0%, rgba(52,82,110,.8) 54%, rgba(30,50,68,.8) 100%);
+
         }
 
         .beer-card:hover {                                                                                               
@@ -41,13 +41,14 @@ function Beer(props) {
         .beer-info-parent {
           display: flex;
           align-items: stretch;
-          background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(52,82,110,.8) 0%, rgba(92,126,156,.8) 54%, rgba(52,82,110,.8) 100%);
           border-radius: 10px;
           border: solid 1px rgba(255, 255, 255, 0.2);
           margin-top: 5px;
           -webkit-box-shadow: 0px 0px 12px -4px #000000; 
           box-shadow: 0px 0px 12px -4px #000000;
+          background: rgb(46,46,46);
+          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 65%, rgba(22,22,22,0.8) 120%);
+
         }
 
         .card-img-beer {
@@ -62,6 +63,7 @@ function Beer(props) {
           flex-grow: 3;
           justify-content: space-between;
           padding: 10px;
+          color: rgba(255, 255, 255, .8);
         }
 
         .beer-info h6{
@@ -91,7 +93,7 @@ function Beer(props) {
 
         .btn-beer {
           background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(52,82,110,.8) 0%, rgba(92,126,156,.8) 100%);
+          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 65%);
           color: rgba(255, 255, 255, .7);
           border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 
@@ -103,7 +105,7 @@ function Beer(props) {
         }
         .btn-beer:hover {
           background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(52,82,110,.9) 0%, rgba(92,126,156,.9) 100%);
+          background: linear-gradient(126deg, rgba(46,46,46,0.9) 0%, rgba(96,96,96,0.9) 65%);
           color: rgba(255, 255, 255, .8);
           border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 

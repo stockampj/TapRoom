@@ -7,11 +7,22 @@ function Carousel(){
       <style jsx>{`
 
         .carousel {
-          margin-top: -25%;
-          margin-left: -85px;
-          width: 200%;
-          min-width: 1500px;
-          max-width: 2000px;
+          margin-top: -10%;
+          width: 140%;
+        }
+
+        @media (max-width: 2000px) {
+          .carousel {
+            margin-top: -350px;
+            width: 2000px;
+          }
+        }
+
+        @media (max-width: 1000px) {
+          .carousel {
+            margin-top: -50px;
+            width: 1300px;
+          }
         }
 
       `}</style>

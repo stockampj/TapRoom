@@ -93,24 +93,27 @@ function BeerMenu(){
           width: 100%;
           bottom: 60px;
           overflow: hidden;
-          border-bottom: solid 1px rgba(255, 255, 255, 0.2); 
+          border-bottom: solid 2px rgba(255, 255, 255, 0.2); 
           -webkit-box-shadow: 4px 5px 5px -3px #000000; 
           box-shadow: 4px 5px 5px -3px #000000;
           z-index: -1;
         }
 
         .top-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           margin-top: 160px;
           width: 100%;
           overflow: hidden;
-          border-top: solid 1px rgba(255, 255, 255, 0.2); 
+          border-top: solid 2px rgba(255, 255, 255, 0.2); 
           -webkit-box-shadow: 4px 5px 5px -3px #000000; 
           box-shadow: 4px 5px 5px -3px #000000;
         }
 
         .flex-container {
           position: absolute;
-          top: 161px;
+          top: 162px;
           height: 100%;
           padding-bottom: 160px;
           display: flex;
