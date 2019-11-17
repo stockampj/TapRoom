@@ -5,23 +5,25 @@ function Beer(props) {
     <div>
       <style jsx>{`
         .beer-card {
-          width: 275px;
+          width: 265px;
           height: 340px;
-          margin: 15px;
+          margin: 25px;
+          margin-bottom: 0px;
           padding: 10px;
           border-radius: 0px;
           border: solid 1px rgba(255, 255, 255, 0.2);
           box-shadow: 4px 5px 5px -3px #000000;
           overflow: hidden;
           background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(30,50,68,.8) 0%, rgba(52,82,110,.8) 54%, rgba(30,50,68,.8) 100%);
+          background: linear-gradient(126deg, rgba(30,50,68,1.0) -10%, rgba(52,82,110,1.0) 54%, rgba(30,50,68,1.0) 110%);
 
         }
 
         .beer-card:hover {                                                                                               
           -webkit-box-shadow: 0px 0px 13px 1px #000000; 
           box-shadow: 0px 0px 13px 1px #000000;
-          background-color: rgba(80, 80, 80, .8);
+          background: rgb(30,50,68);
+          background: linear-gradient(126deg, rgba(30,50,68,1) 0%, rgba(52,82,110,1) 54%, rgba(30,50,68,1) 100%);
         }
 
         .title-div {
@@ -46,8 +48,8 @@ function Beer(props) {
           margin-top: 5px;
           -webkit-box-shadow: 0px 0px 12px -4px #000000; 
           box-shadow: 0px 0px 12px -4px #000000;
-          background: rgb(46,46,46);
-          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 65%, rgba(22,22,22,0.8) 120%);
+          background: rgb(158,137,73);
+          background: linear-gradient(126deg, rgba(158,137,73,.7) 0%, rgba(244,230,187,.7) 65%, rgba(158,137,73,.7) 160%);
 
         }
 
@@ -64,6 +66,7 @@ function Beer(props) {
           justify-content: space-between;
           padding: 10px;
           color: rgba(255, 255, 255, .8);
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
 
         .beer-info h6{
@@ -72,9 +75,9 @@ function Beer(props) {
 
         .brand {
           flex-basis: 400px;
-          color:  rgba(230, 196, 151, 1);
+          color: rgba(40, 40, 40, .9);
           text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-          font-size: 1.1em;
+          font-size: 1.2em;
           font-weight: 700;
         }
 
@@ -88,13 +91,13 @@ function Beer(props) {
           width: 100%;
           position: absolute;
           bottom: 10px;
-          background-color: red;
         }
 
         .btn-beer {
-          background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(46,46,46,0.8) 0%, rgba(96,96,96,0.8) 65%);
-          color: rgba(255, 255, 255, .7);
+          background: rgb(158,137,73);
+          background: linear-gradient(126deg, rgba(158,137,73,.7) 0%, rgba(244,230,187,.7) 65%);
+          color: rgba(40, 40, 40, .9);
+          font-weight: 600;
           border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 
           box-shadow: 1px 1px 2px 0px #000000;
@@ -104,9 +107,9 @@ function Beer(props) {
           bottom: 0px;
         }
         .btn-beer:hover {
-          background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(46,46,46,0.9) 0%, rgba(96,96,96,0.9) 65%);
-          color: rgba(255, 255, 255, .8);
+          background: rgb(158,137,73);
+          background: linear-gradient(126deg, rgba(158,137,73,.9) 0%, rgba(244,230,187,.9) 65%);          color: rgba(255, 255, 255, .8);
+          color: rgba(40, 40, 40, .9);          
           border: solid 1px rgba(255, 255, 255, 0.2);
           -webkit-box-shadow: 1px 1px 2px 0px #000000; 
           box-shadow: 1px 1px 2px 1px #000000;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Beer from './beer';
-import beer1 from '../assets/img/beer1.jpg';
 import beerLight from '../assets/img/beer-light.png';
 import beerMedium from '../assets/img/beer-medium.png';
 import beerRed from '../assets/img/beer-red.png';
@@ -115,7 +114,7 @@ function BeerMenu(){
           position: absolute;
           top: 162px;
           height: 100%;
-          padding-bottom: 160px;
+          padding-bottom: 165px;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
@@ -134,7 +133,7 @@ function BeerMenu(){
         h1 {
           text-align: center;
           font-weight: 800;
-          color:  rgba(230, 196, 151, 1);
+          color:  rgba(244,230,187,.8);
           text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
           font-size: 40px;
           margin: 5px;

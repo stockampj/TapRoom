@@ -1,4 +1,7 @@
 import React from 'react';
+import beer2 from '../assets/img/beer2.jpg';
+import beer3 from '../assets/img/beer3.jpg';
+import beer4 from '../assets/img/beer4.jpg';
 
 function Carousel(){
   return(
@@ -31,13 +34,13 @@ function Carousel(){
           <div className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className="d-block w-100" src="https://www.ascendantbeer.com/wp-content/uploads/2018/07/pint-of-dark-beer-e1531854982289.jpeg" alt="First slide"/>
+                <img className="d-block w-100" src={beer2} alt="First slide"/>
               </div>
               <div className="carousel-item">
-                <img className="d-block w-100" src="https://www.uschamber.com/sites/default/files/articles/images/beer2.jpg" alt="Third slide"/>
+                <img className="d-block w-100" src={beer3} alt="Third slide"/>
               </div>
               <div className="carousel-item">
-                <img className="d-block w-100" src="http://cepgi.typepad.com/.a/6a00e5502e87bf88330224df2d20bc200b-pi" alt="Second slide"/>
+                <img className="d-block w-100" src={beer4} alt="Second slide"/>
               </div>
             </div>
           </div>
