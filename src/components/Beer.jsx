@@ -5,7 +5,7 @@ function Beer(props) {
     <div>
       <style jsx>{`
         .beer-card {
-          width: 265px;
+          width: 260px;
           height: 340px;
           margin: 25px;
           margin-bottom: 0px;
@@ -23,7 +23,7 @@ function Beer(props) {
           -webkit-box-shadow: 0px 0px 13px 1px #000000; 
           box-shadow: 0px 0px 13px 1px #000000;
           background: rgb(30,50,68);
-          background: linear-gradient(126deg, rgba(30,50,68,1) 0%, rgba(52,82,110,1) 54%, rgba(30,50,68,1) 100%);
+          background: linear-gradient(126deg, rgba(30,50,68,1) 10%, rgba(54,84,112,1) 54%, rgba(30,50,68,1) 90%);
         }
 
         .title-div {

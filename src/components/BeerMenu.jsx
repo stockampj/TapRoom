@@ -114,12 +114,11 @@ function BeerMenu(){
           position: absolute;
           top: 162px;
           height: 100%;
-          padding-bottom: 165px;
+          padding-bottom: 190px;
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           flex-wrap: wrap;
           overflow-y: scroll;
-
         }
 
         ::-webkit-scrollbar {
