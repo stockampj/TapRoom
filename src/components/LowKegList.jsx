@@ -3,7 +3,15 @@ import Carousel from './Carousel';
 import Beer from './beer';
 import beerList from './beerList';
 
-function BeerMenu(){
+function LowKegList(){
+
+  let beerListFiltered = [];
+  beerList.forEach((beer) => {
+    if (beer.pintRemainingCount<10){
+      beerListFiltered.push(beer);
+    }
+  });
+
   return(
     <div className="beer-menu">
 
@@ -95,15 +103,15 @@ function BeerMenu(){
       `}</style>
 
       <div>
-        <h1>Today's Tap List</h1>
+        <h1>Low Key List</h1>
       </div>
       <div className="bottom-wrapper">
         <div className="top-wrapper">
             <Carousel />
         </div>
         <div className='flex-container'>
-          {beerList.map((beer, index)=>
-            <Beer
+          {beerListFiltered.map((beer, index)=>
+            <Beer            
             imgURL={beer.imgURL}
             name={beer.name}
             brand={beer.brand}
@@ -112,15 +120,12 @@ function BeerMenu(){
             description={beer.description}
             pintRemainingCount={beer.pintRemainingCount}
             key={index}
-            />
-            )},
+            /> 
+          )},
         </div>
-
       </div>
-      
-
     </div>
   );
 }
 
-export default BeerMenu;
+export default LowKegList;

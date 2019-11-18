@@ -1,10 +1,11 @@
 import React from 'react';
+import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Background from './Background';
-
 import BeerMenu from './BeerMenu';
-import './App.css';
+import LowKegList from './LowKegList';
+import NewKegForm from './NewKegForm';
 
 function App(){
   return (
@@ -14,7 +15,8 @@ function App(){
       <div>
         <Switch>
           <Route exact path='/' component={BeerMenu} />
-          {/* <Route path='/hotpicks' component={} /> */}
+          <Route path='/lowkeglist' component={LowKegList} />
+          <Route path='/newkegform' component={NewKegForm} />
         </Switch>
 
       </div>

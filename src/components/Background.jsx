@@ -20,10 +20,10 @@ function Background(){
           background-image: url(${background});
           background-size: cover;
           background-position: center, center;
-        `}</style>
+        }
+      `}</style>
 
       <div className="app-background">
-
       </div>
     </div>
   );
