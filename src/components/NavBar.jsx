@@ -48,10 +48,17 @@ function NavBar() {
           display: flex;
           flex-flow: row nowrap;
           justify-content: flex-end;
-          background-color: red;
+
+
         }
         .nav-item {
-          
+          color: rgba(255,255,255,.8);
+          font-weight: 600;
+          margin-right: 10px;
+        }
+        .nav-item:hover {
+          color: rgba(255,255,255,1);
+          background-color: rgba(255,255,255,.1);
         }
       `}</style>
       <div className='top-nav-row'>
