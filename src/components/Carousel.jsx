@@ -16,7 +16,7 @@ function Carousel(){
 
         @media (max-width: 2000px) {
           .carousel {
-            margin-top: -350px;
+            margin-top: -200px;
             width: 2000px;
           }
         }
@@ -24,7 +24,8 @@ function Carousel(){
         @media (max-width: 1000px) {
           .carousel {
             margin-top: -50px;
-            width: 1300px;
+
+            height: 150%;
           }
         }
 
