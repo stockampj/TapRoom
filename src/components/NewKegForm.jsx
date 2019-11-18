@@ -8,7 +8,7 @@ function NewKegForm(){
       .flex-container {
           position: absolute;          
           top: 60px;
-          height: 100%;
+          height: 80%;
           width: 100%;
           padding-bottom: 60px;
           display: flex;

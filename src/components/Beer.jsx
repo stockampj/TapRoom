@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import woodTexture from '../assets/img/woodTexture.jpg';
+import {Link} from 'react-router-dom';
 
 function Beer(props) {
   return (
@@ -128,17 +130,28 @@ function Beer(props) {
           margin-right: 30px;
           color: rgba(255, 255, 255, .8);
         }
+        .fa-edit {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          color: rgba(255, 255, 255, .8);
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+          font-size: 1em;
+        }
 
       `}</style>
 
       <div className='card beer-card'>
+        <div className="edit-keg">
+          <Link to="/kegedit"><i className="fas fa-edit"></i></Link>
+        </div>
         <div className="title-div">
           <p className='card-title'>{props.name}</p>
         </div>
         <div className='beer-info-parent'>
           <img className='card-img-beer' src={props.imgURL} />
           <div className="beer-info">
-            <h6 className='card-text'>{props.alchoholContent.toFixed(1)}% ABV</h6>     
+            <h6 className='card-text'><span>{props.alchoholContent.toFixed(1)}% ABV</span></h6>     
             <h6 className='card-text'><span>${props.price.toFixed(2)}</span></h6>
             <h6 className="brand">{props.brand}</h6>
           </div>
@@ -155,5 +168,15 @@ function Beer(props) {
     </div>
   );
 }
+
+Beer.propTypes = {
+  name: PropTypes.string,
+  imgURL: PropTypes.string,
+  alchoholContent: PropTypes.number,
+  price: PropTypes.number,
+  brand: PropTypes.string,
+  description: PropTypes.string,
+  pintRemainingCount: PropTypes.number
+};
 
 export default Beer;

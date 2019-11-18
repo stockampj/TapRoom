@@ -73,7 +73,7 @@ function BeerMenu(){
               transform: translateX(600px);
           }
           50% {
-              opacity: .2;
+              opacity: 1;
           }
           100% {
               opacity: 1;
@@ -92,6 +92,7 @@ function BeerMenu(){
           animation-name: fadeInLeft;
           animation-duration: 3s;
         }
+
       `}</style>
 
       <div>
@@ -99,21 +100,21 @@ function BeerMenu(){
       </div>
       <div className="bottom-wrapper">
         <div className="top-wrapper">
-            <Carousel />
+          <Carousel />
         </div>
         <div className='flex-container'>
           {beerList.map((beer, index)=>
             <Beer
-            imgURL={beer.imgURL}
-            name={beer.name}
-            brand={beer.brand}
-            price={beer.price}
-            alchoholContent={beer.alchoholContent}
-            description={beer.description}
-            pintRemainingCount={beer.pintRemainingCount}
-            key={index}
+              imgURL={beer.imgURL}
+              name={beer.name}
+              brand={beer.brand}
+              price={beer.price}
+              alchoholContent={beer.alchoholContent}
+              description={beer.description}
+              pintRemainingCount={beer.pintRemainingCount}
+              key={index}
             />
-            )},
+          )},
         </div>
 
       </div>

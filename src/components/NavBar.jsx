@@ -51,7 +51,7 @@ function NavBar() {
           background-color: red;
         }
         .nav-item {
-
+          
         }
       `}</style>
       <div className='top-nav-row'>

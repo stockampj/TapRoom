@@ -31,19 +31,19 @@ function Carousel(){
       `}</style>
 
 
-          <div className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img className="d-block w-100" src={beer2} alt="First slide"/>
-              </div>
-              <div className="carousel-item">
-                <img className="d-block w-100" src={beer3} alt="Third slide"/>
-              </div>
-              <div className="carousel-item">
-                <img className="d-block w-100" src={beer4} alt="Second slide"/>
-              </div>
-            </div>
+      <div className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="d-block w-100" src={beer2} alt="First slide"/>
           </div>
+          <div className="carousel-item">
+            <img className="d-block w-100" src={beer3} alt="Third slide"/>
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100" src={beer4} alt="Second slide"/>
+          </div>
+        </div>
+      </div>
 
 
     </div>

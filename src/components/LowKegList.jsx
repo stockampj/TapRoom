@@ -78,14 +78,14 @@ function LowKegList(){
         @keyframes fadeInLeft {
           0% {
               opacity: 0;
-              transform: translateX(600px);
+              transform: translateY(100px);
           }
-          50% {
-              opacity: .2;
+          20% {
+              opacity: .8;
           }
           100% {
               opacity: 1;
-              transform: translateX(0);
+              transform: translateY(0);
           }
         }
 
@@ -98,7 +98,7 @@ function LowKegList(){
           margin: 5px;
           font-family: 'UnifrakturCook', cursive;
           animation-name: fadeInLeft;
-          animation-duration: 3s;
+          animation-duration: 1s;
         }
       `}</style>
 
@@ -107,19 +107,19 @@ function LowKegList(){
       </div>
       <div className="bottom-wrapper">
         <div className="top-wrapper">
-            <Carousel />
+          <Carousel />
         </div>
         <div className='flex-container'>
           {beerListFiltered.map((beer, index)=>
             <Beer            
-            imgURL={beer.imgURL}
-            name={beer.name}
-            brand={beer.brand}
-            price={beer.price}
-            alchoholContent={beer.alchoholContent}
-            description={beer.description}
-            pintRemainingCount={beer.pintRemainingCount}
-            key={index}
+              imgURL={beer.imgURL}
+              name={beer.name}
+              brand={beer.brand}
+              price={beer.price}
+              alchoholContent={beer.alchoholContent}
+              description={beer.description}
+              pintRemainingCount={beer.pintRemainingCount}
+              key={index}
             /> 
           )},
         </div>

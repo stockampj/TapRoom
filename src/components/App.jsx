@@ -6,6 +6,7 @@ import Background from './Background';
 import BeerMenu from './BeerMenu';
 import LowKegList from './LowKegList';
 import NewKegForm from './NewKegForm';
+import KegEdit from './KegEdit';
 
 function App(){
   return (
@@ -17,6 +18,7 @@ function App(){
           <Route exact path='/' component={BeerMenu} />
           <Route path='/lowkeglist' component={LowKegList} />
           <Route path='/newkegform' component={NewKegForm} />
+          <Route path='/kegedit' component={KegEdit} />
         </Switch>
 
       </div>
