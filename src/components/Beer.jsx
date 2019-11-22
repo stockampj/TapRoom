@@ -4,9 +4,20 @@ import woodTexture from '../assets/img/woodTexture.jpg';
 import {Link} from 'react-router-dom';
 
 function Beer(props) {
+    let highAlcohol = "";
+    if (props.alchoholContent > 7){
+      highAlcohol = "high-alcohol"
+    }
+
+    let qualityPrice = "";
+    if (props.price > 5){
+      qualityPrice = "icon quality-price";
+    }
+
   return (
     <div>
       <style jsx>{`
+
         .beer-card {
           width: 285px;
           height: 350px;
@@ -72,17 +83,18 @@ function Beer(props) {
           justify-content: space-between;
           padding: 10px;
           color: rgba(255, 255, 255, .8);
-          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+          text-shadow: 1px 1px 1px rgba(0,0,0,1);
         }
 
         .beer-info h6{
           margin-left: 10px;
+          font-size: 1.1em;
         }
 
         .brand {
           flex-basis: 400px;
           color: rgba(40, 40, 40, .9);
-          text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
           font-size: 1.2em;
           font-weight: 700;
         }
@@ -139,6 +151,20 @@ function Beer(props) {
           font-size: 1em;
         }
 
+        .high-alcohol {
+          color: rgba(46, 89, 14, 1);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+        }
+
+        .quality-price{
+          color: rgba(54,84,112,1);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+        }
+
+        .quality-price::before {
+          content: "★";
+        }
+
       `}</style>
 
       <div className='card beer-card'>
@@ -151,8 +177,8 @@ function Beer(props) {
         <div className='beer-info-parent'>
           <img className='card-img-beer' src={props.imgURL} />
           <div className="beer-info">
-            <h6 className='card-text'><span>{props.alchoholContent.toFixed(1)}% ABV</span></h6>     
-            <h6 className='card-text'><span>${props.price.toFixed(2)}</span></h6>
+            <h6 className='card-text'><span className={highAlcohol}>{props.alchoholContent.toFixed(1)}% ABV</span></h6>     
+            <h6 className='card-text'><span className={qualityPrice}>${props.price.toFixed(2)}</span></h6>
             <h6 className="brand">{props.brand}</h6>
           </div>
         </div>
