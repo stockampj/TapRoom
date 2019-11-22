@@ -4,15 +4,15 @@ import woodTexture from '../assets/img/woodTexture.jpg';
 import {Link} from 'react-router-dom';
 
 function Beer(props) {
-    let highAlcohol = "";
-    if (props.alchoholContent > 7){
-      highAlcohol = "high-alcohol"
-    }
+  let highAlcohol = '';
+  if (props.alchoholContent > 7){
+    highAlcohol = 'high-alcohol';
+  }
 
-    let qualityPrice = "";
-    if (props.price > 5){
-      qualityPrice = "icon quality-price";
-    }
+  let qualityPrice = '';
+  if (props.price > 5){
+    qualityPrice = 'icon quality-price';
+  }
 
   return (
     <div>
@@ -82,7 +82,7 @@ function Beer(props) {
           flex-grow: 3;
           justify-content: space-between;
           padding: 10px;
-          color: rgba(255, 255, 255, .8);
+          color: rgba(255, 255, 255, 1);
           text-shadow: 1px 1px 1px rgba(0,0,0,1);
         }
 
@@ -94,9 +94,9 @@ function Beer(props) {
         .brand {
           flex-basis: 400px;
           color: rgba(40, 40, 40, .9);
-          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
-          font-size: 1.2em;
-          font-weight: 700;
+          text-shadow: 0px 0px 3px rgba(255,255,255,.8);
+          font-size: 1.3em;
+          font-weight: 900;
         }
 
         .card-description {
@@ -152,13 +152,14 @@ function Beer(props) {
         }
 
         .high-alcohol {
-          color: rgba(46, 89, 14, 1);
-          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+          color: rgba(62, 112, 54, 1);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
+
 
         .quality-price{
           color: rgba(54,84,112,1);
-          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
 
         .quality-price::before {

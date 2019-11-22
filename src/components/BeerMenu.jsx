@@ -3,7 +3,7 @@ import Carousel from './Carousel';
 import Beer from './beer';
 import beerList from './beerList';
 
-function BeerMenu(){
+function BeerMenu(props){
   return(
     <div className="beer-menu">
 
@@ -103,7 +103,7 @@ function BeerMenu(){
           <Carousel />
         </div>
         <div className='flex-container'>
-          {beerList.map((beer, index)=>
+          {props.masterBeerList.map((beer, index)=>
             <Beer
               imgURL={beer.imgURL}
               name={beer.name}
