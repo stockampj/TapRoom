@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Beer(props) {
   let highAlcohol = '';
-  if (props.alchoholContent > 7){
+  if (props.alcoholContent > 7){
     highAlcohol = 'high-alcohol';
   }
 

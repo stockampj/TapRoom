@@ -19,7 +19,7 @@ React is used to create a simulated multi-page application. Customers can view t
 ## Application Specifications
 
 
-<img src='src/assets/img/Data-Structure.jpg' style="display:block; width=100%; margin-left:auto; margin-right:auto;">
+<img src="src/assets/img/Data-Structure.jpg" style="display:block; width=100%; margin-left:auto; margin-right:auto;">
 
 ## Known Bugs
 

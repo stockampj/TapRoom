@@ -24,6 +24,10 @@ class App extends React.Component {
     newBeerList.push(newKeg);
     this.setState({masterBeerList: newBeerList});
   }
+
+  handleNewPintPour(){
+
+  }
   
   render(){
     return (
@@ -33,7 +37,7 @@ class App extends React.Component {
         <div>
           <Switch>
             <Route exact path='/' render={()=><BeerMenu masterBeerList={this.state.masterBeerList} /> } />
-            <Route path='/lowkeglist' component={LowKegList} />
+            <Route path='/lowkeglist' render={()=><LowKegList masterBeerList={this.state.masterBeerList} /> } />
             <Route path='/newkegform' render={()=><NewKegForm onNewKegCreation={this.handleNewKegCreation} />} />
             <Route path='/kegedit' component={KegEdit} />
           </Switch>

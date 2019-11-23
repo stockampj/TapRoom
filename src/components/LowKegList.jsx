@@ -1,13 +1,12 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Beer from './beer';
-import beerList from './beerList';
 
-function LowKegList(){
+function LowKegList(props){
 
   let beerListFiltered = [];
-  beerList.forEach((beer) => {
-    if (beer.pintRemainingCount<10){
+  props.masterBeerList.forEach((beer) => {
+    if (beer.pintsRemainingCount<10){
       beerListFiltered.push(beer);
     }
   });
@@ -116,9 +115,9 @@ function LowKegList(){
               name={beer.name}
               brand={beer.brand}
               price={beer.price}
-              alchoholContent={beer.alchoholContent}
+              alcoholContent={beer.alcoholContent}
               description={beer.description}
-              pintRemainingCount={beer.pintRemainingCount}
+              pintsRemainingCount={beer.pintsRemainingCount}
               key={index}
             /> 
           )},
