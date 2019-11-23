@@ -14,6 +14,8 @@ function Beer(props) {
     qualityPrice = 'icon quality-price';
   }
 
+  console.log(props)
+
   return (
     <div>
       <style jsx>{`
@@ -178,7 +180,7 @@ function Beer(props) {
         <div className='beer-info-parent'>
           <img className='card-img-beer' src={props.imgURL} />
           <div className="beer-info">
-            <h6 className='card-text'><span className={highAlcohol}>{props.alchoholContent.toFixed(1)}% ABV</span></h6>     
+            <h6 className='card-text'><span className={highAlcohol}>{props.alcoholContent.toFixed(1)}% ABV</span></h6>     
             <h6 className='card-text'><span className={qualityPrice}>${props.price.toFixed(2)}</span></h6>
             <h6 className="brand">{props.brand}</h6>
           </div>
@@ -188,7 +190,7 @@ function Beer(props) {
         </div>
         <div className='button-div'>
           <a href="#" className="btn btn-beer">Pour Pint</a>
-          <h6 className='beer-count'>Pints Left: {props.pintRemainingCount}</h6>
+          <h6 className='beer-count'>Pints Left: {props.pintsRemainingCount}</h6>
         </div>
       </div>
 
@@ -199,11 +201,11 @@ function Beer(props) {
 Beer.propTypes = {
   name: PropTypes.string,
   imgURL: PropTypes.string,
-  alchoholContent: PropTypes.number,
+  alcoholContent: PropTypes.number,
   price: PropTypes.number,
   brand: PropTypes.string,
   description: PropTypes.string,
-  pintRemainingCount: PropTypes.number
+  pintsRemainingCount: PropTypes.number
 };
 
 export default Beer;

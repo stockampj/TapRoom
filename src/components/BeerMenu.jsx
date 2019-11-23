@@ -109,9 +109,9 @@ function BeerMenu(props){
               name={beer.name}
               brand={beer.brand}
               price={beer.price}
-              alchoholContent={beer.alchoholContent}
+              alcoholContent={beer.alcoholContent}
               description={beer.description}
-              pintRemainingCount={beer.pintRemainingCount}
+              pintsRemainingCount={beer.pintsRemainingCount}
               key={index}
             />
           )},

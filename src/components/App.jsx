@@ -16,6 +16,13 @@ class App extends React.Component {
     this.state = {
       masterBeerList: BeerList
     };
+    this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
+  }
+
+  handleNewKegCreation(newKeg){
+    var newBeerList = this.state.masterBeerList.slice();
+    newBeerList.push(newKeg);
+    this.setState({masterBeerList: newBeerList});
   }
   
   render(){
@@ -27,7 +34,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' render={()=><BeerMenu masterBeerList={this.state.masterBeerList} /> } />
             <Route path='/lowkeglist' component={LowKegList} />
-            <Route path='/newkegform' component={NewKegForm} />
+            <Route path='/newkegform' render={()=><NewKegForm onNewKegCreation={this.handleNewKegCreation} />} />
             <Route path='/kegedit' component={KegEdit} />
           </Switch>
   
