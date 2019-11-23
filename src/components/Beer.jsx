@@ -14,8 +14,6 @@ function Beer(props) {
     qualityPrice = 'icon quality-price';
   }
 
-  console.log(props)
-
   return (
     <div>
       <style jsx>{`

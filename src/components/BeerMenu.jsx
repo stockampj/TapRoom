@@ -1,9 +1,9 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Beer from './beer';
-import beerList from './beerList';
 
 function BeerMenu(props){
+  console.log(props.masterBeerList);
   return(
     <div className="beer-menu">
 
@@ -102,9 +102,11 @@ function BeerMenu(props){
         <div className="top-wrapper">
           <Carousel />
         </div>
+
         <div className='flex-container'>
-          {props.masterBeerList.map((beer, index)=>
-            <Beer
+          {Object.keys(props.masterBeerList).map(function(kegId){
+            var beer = props.masterBeerList[kegId];
+            return <Beer
               imgURL={beer.imgURL}
               name={beer.name}
               brand={beer.brand}
@@ -112,14 +114,13 @@ function BeerMenu(props){
               alcoholContent={beer.alcoholContent}
               description={beer.description}
               pintsRemainingCount={beer.pintsRemainingCount}
-              key={index}
-            />
-          )},
+              key={kegId}
+              kegId={kegId}
+            />;
+          })}
         </div>
 
       </div>
-      
-
     </div>
   );
 }

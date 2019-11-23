@@ -8,21 +8,28 @@ import LowKegList from './LowKegList';
 import NewKegForm from './NewKegForm';
 import KegEdit from './KegEdit';
 import BeerList from './beerList';
+import v4 from 'uuid';
 
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      masterBeerList: BeerList
+      // masterBeerList: BeerList
+      masterBeerList: {},
     };
     this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
   }
 
   handleNewKegCreation(newKeg){
-    var newBeerList = this.state.masterBeerList.slice();
-    newBeerList.push(newKeg);
-    this.setState({masterBeerList: newBeerList});
+    // var newBeerList = this.state.masterBeerList.slice();
+    // newBeerList.push(newKeg);
+    // this.setState({masterBeerList: newBeerList});
+    var newKegId = v4();
+    var newBeerList = Object.assign(
+      {}, this.state.masterBeerList, {[newKegId]: newKeg}
+    );
+    this.setState({masterBeerList: newBeerList})
   }
 
   handleNewPintPour(){
