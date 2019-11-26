@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Beer from './beer';
+import PropTypes from 'prop-types';
 
 function BeerMenu(props){
   console.log(props.masterBeerList);
@@ -124,5 +125,9 @@ function BeerMenu(props){
     </div>
   );
 }
+
+BeerMenu.propTypes = {
+  masterBeerList: PropTypes.object
+};
 
 export default BeerMenu;

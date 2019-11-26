@@ -3,8 +3,8 @@ import beerMedium from '../assets/img/beer-medium.png';
 import beerRed from '../assets/img/beer-red.png';
 import beerDark from '../assets/img/beer-dark.png';
 
-var beerList = [
-  {
+var beerList = { 
+  'UNIQUEID1' : {
     imgURL: beerLight,
     name: 'Citra Dry Hopped Transcendental Pulp',
     brand: 'Stone',
@@ -13,7 +13,7 @@ var beerList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     pintsRemainingCount: 121
   },
-  {
+  'UNIQUEID2' : {
     imgURL: beerMedium,
     name: 'Mayor\'s Highball Ale',
     brand: 'Founders',
@@ -22,7 +22,7 @@ var beerList = [
     description: 'In iaculis nunc sed augue lacus. Et netus et malesuada fames ac turpis. Blandit libero volutpat sed cras.',
     pintsRemainingCount: 75
   },
-  {
+  'UNIQUEID3' : {
     imgURL: beerLight,
     name: 'Cow Creek Pilsner',
     brand: 'New Glarus Brewing Co.',
@@ -31,7 +31,7 @@ var beerList = [
     description: 'Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Tortor pretium viverra suspendisse potenti.',
     pintsRemainingCount: 7
   },
-  {
+  'UNIQUEID4' : {
     imgURL: beerDark,
     name: 'Caesar\'s Hellhole Stout',
     brand: 'Rogue',
@@ -40,7 +40,7 @@ var beerList = [
     description: 'Blandit aliquam etiam erat velit scelerisque in dictum. Lacinia quis vel eros donec. Felis bibendum ut tristique et.',
     pintsRemainingCount: 75
   },
-  {
+  'UNIQUEID5' : {
     imgURL: beerRed,
     name: 'The Sunk Superstar',
     brand: 'Elysian',
@@ -49,7 +49,7 @@ var beerList = [
     description: 'Lobortis feugiat vivamus at augue eget arcu dictum varius.',
     pintsRemainingCount: 62
   },
-  {
+  'UNIQUEID6' : {
     imgURL: beerDark,
     name: 'Caesar\'s Hellhole Stout',
     brand: 'Rogue',
@@ -58,7 +58,7 @@ var beerList = [
     description: 'Blandit aliquam etiam erat velit scelerisque in dictum. Lacinia quis vel eros donec. Felis bibendum ut tristique et.',
     pintsRemainingCount: 54
   },
-  {
+  'UNIQUEID7' : {
     imgURL: beerRed,
     name: 'The Sunk Superstar',
     brand: 'Elysian',
@@ -67,15 +67,15 @@ var beerList = [
     description: 'Lobortis feugiat vivamus at augue eget arcu dictum varius.',
     pintsRemainingCount: 115
   },
-  {
+  'UNIQUEID8' : {
     imgURL: beerMedium,
     name: 'Mayor\'s Highball Ale',
     brand: 'Founders',
     price: 4.50,
     alcoholContent: 6.3,
     description: 'In iaculis nunc sed augue lacus. Et netus et malesuada fames ac turpis. Blandit libero volutpat sed cras.',
-    pintsRemainingCount: 90
+    pintsRemainingCount: 4    
   }
-];
+};
 
 export default beerList;

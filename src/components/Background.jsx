@@ -3,8 +3,7 @@ import background from '../assets/img/background.jpg';
 
 function Background(){
   return(
-    <div>
-
+    <div className="app-background">
       <style jsx>{`
         .app-background{
           position: fixed;
@@ -22,9 +21,6 @@ function Background(){
           background-position: center, center;
         }
       `}</style>
-
-      <div className="app-background">
-      </div>
     </div>
   );
 }

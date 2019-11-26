@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Keg from '../assets/img/keg.png';
+
 
 function NewKegForm(props){
   let _name = null;         
@@ -12,7 +14,7 @@ function NewKegForm(props){
   
   function handleNewKegSubmit(event){
     event.preventDefault();
-    console.log(parseInt(_pintsRemaining))
+    console.log(parseInt(_pintsRemaining));
     props.onNewKegCreation({name: _name.value, brand: _brand.value, price: parseFloat(_price.value), alcoholContent: parseFloat(_alcoholContent.value), description: _description.value, imgURL: _imgURL.value, pintsRemainingCount: parseInt(_pintsRemaining)});
     _name = null;         
     _brand = null;         
@@ -24,7 +26,7 @@ function NewKegForm(props){
   }
 
   return(
-    <div>
+    <div className="flex-container">
       <style jsx>{`
         
       .flex-container {
@@ -35,11 +37,22 @@ function NewKegForm(props){
           padding-bottom: 60px;
           display: flex;
           justify-content: center;
+          align-content: center;
           flex-wrap: wrap;
+          background-image: url(${Keg});
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 300px;
+        }
+
+        input {
+          background-color: rgba(1,1,1,0);
+          border: none;
+          color: black;
         }
 
         `}</style>
-      <div className="flex-container">
+      <div>
         <form onSubmit={handleNewKegSubmit}>
           <input
             type='text'

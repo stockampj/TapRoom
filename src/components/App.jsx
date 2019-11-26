@@ -15,24 +15,21 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      // masterBeerList: BeerList
-      masterBeerList: {},
+      masterBeerList: BeerList,
+      lowKegFilter: 'off'
     };
     this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
   }
 
   handleNewKegCreation(newKeg){
-    // var newBeerList = this.state.masterBeerList.slice();
-    // newBeerList.push(newKeg);
-    // this.setState({masterBeerList: newBeerList});
     var newKegId = v4();
     var newBeerList = Object.assign(
       {}, this.state.masterBeerList, {[newKegId]: newKeg}
     );
-    this.setState({masterBeerList: newBeerList})
+    this.setState({masterBeerList: newBeerList});
   }
 
-  handleNewPintPour(){
+  handleNewPintPour(kegId){
 
   }
   
