@@ -4,6 +4,7 @@ import woodTexture from '../assets/img/woodTexture.jpg';
 import {Link} from 'react-router-dom';
 
 function Beer(props) {
+
   let highAlcohol = '';
   if (props.alcoholContent > 7){
     highAlcohol = 'high-alcohol';
@@ -13,7 +14,7 @@ function Beer(props) {
   if (props.price > 5){
     qualityPrice = 'icon quality-price';
   }
-
+  console.log(props.kegId);
   return (
     <div>
       <style jsx>{`
@@ -187,12 +188,14 @@ function Beer(props) {
           <p className='card-text'>{props.description}</p>
         </div>
         <div className='button-div'>
-          <a href="#" className="btn btn-beer">Pour Pint</a>
+          <a href="#" className="btn btn-beer" onClick={()=>{props.onPintPour(props.kegId);}}>Pour Pint</a>
           <h6 className='beer-count'>Pints Left: {props.pintsRemainingCount}</h6>
         </div>
       </div>
 
     </div>
+
+
   );
 }
 
@@ -203,7 +206,9 @@ Beer.propTypes = {
   price: PropTypes.number,
   brand: PropTypes.string,
   description: PropTypes.string,
-  pintsRemainingCount: PropTypes.number
+  pintsRemainingCount: PropTypes.number,
+  onPintPour: PropTypes.func,
+  kegId: PropTypes.string
 };
 
 export default Beer;

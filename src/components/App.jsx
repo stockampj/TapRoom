@@ -19,6 +19,7 @@ class App extends React.Component {
       lowKegFilter: 'off'
     };
     this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
+    this.handlePintPour = this.handlePintPour.bind(this);
   }
 
   handleNewKegCreation(newKeg){
@@ -29,8 +30,14 @@ class App extends React.Component {
     this.setState({masterBeerList: newBeerList});
   }
 
-  handleNewPintPour(kegId){
-
+  handlePintPour(kegId){
+    var updatedMenu = Object.assign({}, this.state.masterBeerList);
+    if (updatedMenu[kegId].pintsRemainingCount>0){
+      updatedMenu[kegId].pintsRemainingCount--;
+      this.setState({masterBeerList: updatedMenu});
+    } else {
+      console.log("Keg is empty");
+    }
   }
   
   render(){
@@ -40,7 +47,7 @@ class App extends React.Component {
         <NavBar />
         <div>
           <Switch>
-            <Route exact path='/' render={()=><BeerMenu masterBeerList={this.state.masterBeerList} /> } />
+            <Route exact path='/' render={()=><BeerMenu masterBeerList={this.state.masterBeerList} onPintPour={this.handlePintPour}/> } />
             <Route path='/lowkeglist' render={()=><LowKegList masterBeerList={this.state.masterBeerList} /> } />
             <Route path='/newkegform' render={()=><NewKegForm onNewKegCreation={this.handleNewKegCreation} />} />
             <Route path='/kegedit' component={KegEdit} />

@@ -4,7 +4,6 @@ import Beer from './beer';
 import PropTypes from 'prop-types';
 
 function BeerMenu(props){
-  console.log(props.masterBeerList);
   return(
     <div className="beer-menu">
 
@@ -117,6 +116,7 @@ function BeerMenu(props){
               pintsRemainingCount={beer.pintsRemainingCount}
               key={kegId}
               kegId={kegId}
+              onPintPour={props.onPintPour}
             />;
           })}
         </div>
@@ -127,7 +127,8 @@ function BeerMenu(props){
 }
 
 BeerMenu.propTypes = {
-  masterBeerList: PropTypes.object
+  masterBeerList: PropTypes.object,
+  onPintPour: PropTypes.func
 };
 
 export default BeerMenu;
